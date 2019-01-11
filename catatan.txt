@@ -1,0 +1,146 @@
+
+*URUTAN WAKTU KE BAWAH
+
+===================================================================================
+
+so di upload file pe algoritma
+
+ada yang tidak sesuai di penjelasan pengunggahan.. nanti sesuaikan
+
+bken dlu dpe penyimpanan smua
+
+
+
+====================================================================================
+
+
+konfirmasi, hanya pemberitahuan... di situ sediakan tombol ke jurnal
+
+array yang di upload..
+submisi success terimakasih
+
+
+ganti jangan pake flash.. pake session soalnya belum tahu kirim data array di form
+
+===================================================================================
+
+6 des 2018
+ada error file upload return null
+- masalah pertama musti ada atribut <form  enctype="multipart/form-data" >,
+
+- yang kedua server nginx minimal tidak mendukung upload file yang berukuran besar, 
+    maka konfgurasi lagi di "sudo gedit /etc/nginx/nginx.conf", baru tambahkan
+    client_max_body_size 4M; (4 Mega)
+    https://www.cyberciti.biz/faq/linux-unix-bsd-nginx-413-request-entity-too-large/
+
+
+
+=======================================================================================
+7 des
+
+-jurnal so jadi crud.. done
+
+-trash
+//nanti coba hapus per folder..   done
+
+-lanjut request review..
+
+-print sj kartu asistensi
+
+
+========================================================================================
+7 des 
+
+
+-ada di kertas catatan...
+"sbutul database cma reviewer dengan reveiw one to one"
+cos review juga nanti akan 1 to many dengan jurnal 
+
+- reviewer sebenarnya tidak perlu autentikasi, dpe autentikasi itu so dari link jurnal yang ta enkripsi
+
+-quisioner n ke 1 review
+isi review n ke 1 review
+cos dlihat 1 baris quisioner itu satu pertanyaan,, di akses berdasarkan id review.. 
+jadi table quisiner dengan isi review mjadi banyak sekali
+
+
+
+
+- relasi dan bagaimana menghapus..
+reviewer <---- reqreview -----> Jurnal
+reqreview ------> quisioner, isi review
+
+klo reviewer di hapus, maka reqreview akan terhapus juga...
+dan klau reqreview terhapus jurnal pe status update jadi editing
+
+klau reqreview terhapus maka quisioner dan isi review terhapus..
+
+-isi review berisi jawaban dari review yang statis
+-quisioner berisi daftar pertanyaan dan jawaban; dimana pertanyaan sebelumnya telah dibuat terlebih dahulu oleh dosen...
+
+
+- logika supaya tidak m tampil reqreview yang reviewernya ada ditrash ada di trash
+where reviewer deleted_at not null
+
+
+=====================================================================================================================
+
+sab des 8
+
+ini syarat2 review yang baik
+
+https://kenali.co/berita-80837-cara-menulis-review-jurnal-ilmiah-dan-contoh-formatnya.html
+http://www.academia.edu/11345376/Melakukan_Resume_atau_Review_dari_sebuah_jurnal
+
+
+
+
+-isi review blum jadi
+
+-baru bbuat quisioner
+
+- di centang quisioner.. pake js.. defaultnya tcentang, klo dicentang buat quisioner arahkan buat quisioner
+klo tidak arahkan langsung ke store review
+
+- ada dua pilihan{
+    - review tidak ada fitur update,... klo so jadi langsung kirim tpi tanya anda harus pastikan data sudah benar..
+    - review ada fitur update,... klo so jadi jangan dulu kirim..
+}
+
+
+cara menghapus isi tag secara clearly.. alias semua
+var mydiv = document.getElementById('FirstDiv');
+while(mydiv.firstChild) {
+  mydiv.removeChild(mydiv.firstChild);
+}
+
+
+
+
+
+
+
+
+
+
+================================================================================
+
+9 des
+
+sdki lagi semangat!!
+
+yang belum
+- cara kirim email; (done)
+- hapus request(hanya ketika ditolak); (done)
+- hapus reviewer(hanya ketika tidak ada yang sementara di request);(done)
+- tampil request hanya berdasarkan id dosen yang login;(done)
+
+- update status expired otomatis 3 hari(done)
+- buat form isi review(done)
+
+- terakhir tampilan web
+
+- kse bae database dengan class..
+- laporan interface mockup
+
+================================================================================
