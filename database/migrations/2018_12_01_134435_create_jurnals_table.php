@@ -6,12 +6,6 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateJurnalsTable extends Migration
 {
-    /**
-    dpe contoh form submit lihat
-     lihat
-     /media/kiki/Data/Lecture/Semester 5/RPL/rpl user interface/e-JURNAL/[rpl]-contoh aplikasi/
-     Langkah langkah Submit Naskah Publikasi di Jurnal JMPK FK UGM melalui sistem OJS.mp4
-     */
     
     public function up()
     {
